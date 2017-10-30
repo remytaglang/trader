@@ -1,2 +1,168 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="text-center">
+    <h3>La roue de la fortune</h3>
+  </div>
+</div>
+
+<div class="container">
+  <div class="text-center">
+    <h5>Etat des lieux à <%= @timing %> </h5>
+  </div>
+  <div class="text-center">
+    <h3>REMY </h3>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div>
+    <h4>TOTAL</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+      <h4>Total détenu</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>Gain/perte</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>Croissance</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+      <h4><%=@total.round(0)%> $</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4><%= @gain.round(0) %> $</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>- %</h4>
+    </div>
+  </div>
+
+</div>
+
+<div class="container text-center">
+  <div>
+    <h4>DETAIL</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-1">
+      <h5>Monnaie</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Cours</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Total détenu</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Gain</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Croissance</h5>
+    </div>
+  </div>
+
+<% @remy.each do |order| %>
+  <div class="row">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-1">
+      <h7><%=order.name%></h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.price_usd.to_f.round(3)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.total.round(0)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.gain.round(0)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7> - %</h7>
+    </div>
+  </div>
+<% end %>
+
+</div>
+
+<div class="container">
+  <div class="text-center">
+    <h3>Maxence </h3>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div>
+    <h4>TOTAL</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+      <h4>Total détenu</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>Gain/perte</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>Croissance</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+      <h4><%=@totalmaxence.round(0)%> $</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4><%= @gainmaxence.round(0) %> $</h4>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <h4>- %</h4>
+    </div>
+  </div>
+
+</div>
+
+<div class="container text-center">
+  <div>
+    <h4>DETAIL</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-1">
+      <h5>Monnaie</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Cours</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Total détenu</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Gain</h5>
+    </div>
+    <div class="col-xs-2">
+      <h5>Croissance</h5>
+    </div>
+  </div>
+
+<% @maxence.each do |order| %>
+  <div class="row">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-1">
+      <h7><%=order.name%></h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.price_usd.to_f.round(3)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.total.round(0)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7><%=order.gain.round(0)%> $</h7>
+    </div>
+    <div class="col-xs-2">
+      <h7> - %</h7>
+    </div>
+  </div>
+<% end %>
+
+</div>
