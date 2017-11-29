@@ -12,3 +12,6 @@ order1 = Order.create(name: "Ripple", currency: "ripple", abreviation: "XRP", pr
 order2 = Order.create(name: "Ripple v2", currency: "ripple", abreviation: "XRP", prixentree: 0.2411, totalentree: 298.52, number_achat: 1275.73, owner: "Remy")
 order3 = Order.create(name: "Ripple", currency: "ripple", abreviation: "XRP", prixentree: 0.2492, totalentree: 347, number_achat: 1435.07, owner: "Maxence")
 order4 = Order.create(name: "Monero", currency: "monero", abreviation: "XMR", prixentree: 89.49, totalentree: 308.29, number_achat: 3.445, owner: "Remy")
+order5 = Order.create(name: "Neo", currency: "neo", abreviation: "NEO", prixentree: 38.08, totalentree: 228.48, number_achat: 6.00, owner: "Remy")
+order6 = Order.create(name: "Power", currency: "power-ledger", abreviation: "POWR", prixentree: 59.64, totalentree: 0.62778900, number_achat: 95.00, owner: "Remy")
+order7 = Order.create(name: "Factom", currency: "factom", abreviation: "FCT", prixentree: 59.72, totalentree: 23.77, number_achat: 2.51234017, owner: "Remy")
