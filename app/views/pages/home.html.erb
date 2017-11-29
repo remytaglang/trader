@@ -18,26 +18,32 @@
     <h4>TOTAL</h4>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-2 ">
+      <h4>Total investi</h4>
+    </div>
+    <div class="col-xs-3 col-sm-2 ">
       <h4>Total détenu</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4>Gain/perte</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4>Croissance</h4>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-2">
+      <h4><%=@initial.round(0)%> $</h4>
+    </div>
+    <div class="col-xs-3 col-sm-2">
       <h4><%=@total.round(0)%> $</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4><%= @gain.round(0) %> $</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
-      <h4>- %</h4>
+    <div class="col-xs-3 col-sm-2">
+      <h4> <%= (100.00*(@gain/@initial)).round(2) %> %</h4>
     </div>
   </div>
 
@@ -80,7 +86,7 @@
       <h7><%=order.gain.round(0)%> $</h7>
     </div>
     <div class="col-xs-2">
-      <h7> - %</h7>
+      <h7> <%= (100.00*(order.gain / order.totalentree)).round(2) %> %</h7>
     </div>
   </div>
 <% end %>
@@ -98,26 +104,32 @@
     <h4>TOTAL</h4>
   </div>
   <div class="row">
-    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-2">
+      <h4>Total investi</h4>
+    </div>
+    <div class="col-xs-3 col-sm-2">
       <h4>Total détenu</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4>Gain/perte</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4>Croissance</h4>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-4 col-sm-2 col-sm-offset-3">
+    <div class="col-xs-3 col-sm-2 col-sm-offset-2">
+      <h4><%=@initialmaxence.round(0)%> $</h4>
+    </div>
+    <div class="col-xs-3 col-sm-2">
       <h4><%=@totalmaxence.round(0)%> $</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
+    <div class="col-xs-3 col-sm-2">
       <h4><%= @gainmaxence.round(0) %> $</h4>
     </div>
-    <div class="col-xs-4 col-sm-2">
-      <h4>- %</h4>
+    <div class="col-xs-3 col-sm-2">
+      <h4> <%= (100.00*(@gainmaxence/@initialmaxence)).round(2) %> %  </h4>
     </div>
   </div>
 
@@ -160,7 +172,7 @@
       <h7><%=order.gain.round(0)%> $</h7>
     </div>
     <div class="col-xs-2">
-      <h7> - %</h7>
+      <h7> <%= (100.00*(order.gain / order.totalentree)).round(2) %> %</h7>
     </div>
   </div>
 <% end %>
